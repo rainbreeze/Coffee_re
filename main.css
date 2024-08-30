@@ -2,7 +2,6 @@ body {
     font-family: "Jua", sans-serif;
     font-weight: 400;
     font-style: normal;
-    height: 2000px;
 }
 
 a {
@@ -26,7 +25,7 @@ header {
     margin: 0 auto;
 }
 
-header > .inner {
+header>.inner {
     height: 120px;
     background-color: beige;
 }
@@ -39,7 +38,7 @@ header .logo {
 }
 
 header .sub-menu {
-    height:40px;
+    height: 40px;
     position: absolute;
     top: 10px;
     right: 5px;
@@ -71,7 +70,7 @@ header .search input:focus {
     width: 180px;
 }
 
-header .search .material-icons{
+header .search .material-icons {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -113,17 +112,17 @@ header .main-menu .item-menu {
     display: flex;
 }
 
-header .main-menu .item .item__name{
+header .main-menu .item .item__name {
     border-radius: 5px 5px 0 0;
     padding: 10px;
 }
 
-header .main-menu .item:hover .item__name{
+header .main-menu .item:hover .item__name {
     background-color: black;
     color: orange;
 }
 
-header .main-menu .item .item__contents{
+header .main-menu .item .item__contents {
     position: fixed;
     top: 120px;
     left: 0;
@@ -132,11 +131,11 @@ header .main-menu .item .item__contents{
     background-color: black;
 }
 
-header .main-menu .item:hover .item__contents{
+header .main-menu .item:hover .item__contents {
     display: block;
 }
 
-header .main-menu .item .item__contents .contents_list .contents{
+header .main-menu .item .item__contents .contents_list .contents {
     display: flex;
     padding: 10px;
 }
@@ -149,27 +148,27 @@ header .main-menu .item .item__contents .contents_list .contents li {
     align-items: center;
 }
 
-header .main-menu .item .item__contents .contents_list .contents li h4{
+header .main-menu .item .item__contents .contents_list .contents li h4 {
     font-size: 20px;
     color: white;
     margin-bottom: 20px;
 }
 
-header .main-menu .item .item__contents .contents_list .contents li h4:hover{
+header .main-menu .item .item__contents .contents_list .contents li h4:hover {
     color: orange;
 }
 
-header .main-menu .item .item__contents .contents_list .contents li ul li a{
+header .main-menu .item .item__contents .contents_list .contents li ul li a {
     font-size: 16px;
     color: #999;
     margin-bottom: 10px;
 }
 
-header .main-menu .item .item__contents .contents_list .contents li ul li a:hover{
+header .main-menu .item .item__contents .contents_list .contents li ul li a:hover {
     color: orange;
 }
 
-header .main-menu .item .item__contents .contents_texture{
+header .main-menu .item .item__contents .contents_texture {
     background-image: url(./images/main_menu_pattern.jpg);
 }
 
@@ -178,9 +177,107 @@ header .main-menu .item .item__contents .contents_texture .inner {
 }
 
 header .main-menu .item .item__contents .contents_texture h2,
-header .main-menu .item .item__contents .contents_texture p
- {
+header .main-menu .item .item__contents .contents_texture p {
     color: white;
     font-size: 15px;
     margin-bottom: 10px;
+}
+
+.visual {
+    margin-top: 120px;
+    background-image: url(./images/visual_bg.jpg);
+}
+
+.visual>.inner {
+    height: 646px;
+}
+
+.btn {
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn.btn--brown {
+    color: brown;
+    border-color: brown;
+    opacity: .9;
+}
+
+.btn.btn--brown:hover {
+    color: white;
+    background-color: brown;
+}
+
+.visual .visual_title {
+    position: absolute;
+    left: 20px;
+}
+
+.visual .visual_btn {
+    position: absolute;
+    top: 220px;
+    left: 150px;
+}
+
+.visual .visual_cup1 {
+    position: absolute;
+    right: -60px;
+    top: 0;
+}
+
+.visual .visual_cup1_text {
+    position: absolute;
+    right: 200px;
+    top: 80px;
+}
+
+.visual .visual_cup2 {
+    position: absolute;
+    right: 140px;
+    top: 160px;
+}
+
+.visual .visual_cup2_text {
+    position: absolute;
+    right: 380px;
+    top: 180px;
+}
+
+.visual .visual_spoon {
+    position: absolute;
+    bottom: 10px;
+    left: 240px;
+}
+
+.visual .fade-out {
+    opacity: 0;
+}
+
+.badges {
+    position: fixed;
+    top: 132px;
+    right: 10px;
+}
+
+.badges .badge {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.badges .badge img {
+    display: block;
 }
