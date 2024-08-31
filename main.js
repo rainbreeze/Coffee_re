@@ -37,3 +37,36 @@ window.addEventListener('scroll', function() {
         });
     }
 });
+
+new Swiper ('.notice .swiper', {
+    autoplay : true,
+    loop : true
+});
+
+const promotionEl = document.querySelector('.promotion');
+const promotionBtn = document.querySelector('.notice .promotionBtn');
+
+promotionBtn.addEventListener('click', function(){
+    if(promotionEl.classList.contains('hide')){
+        promotionEl.classList.remove('hide');
+    }
+    else{
+        promotionEl.classList.add('hide');
+    }
+});
+
+new Swiper ('.promotion .swiper', {
+    autoplay : true,
+    loop : true,
+    slidesPerView : 3,
+    spaceBetween : 10,
+    centeredSlides : true,
+    navigation : {
+        prevEl : '.promotion .swiper-button-prev',
+        nextEl : '.promotion .swiper-button-next',
+    },
+    pagination: {
+        el: '.promotion .swiper-pagination',
+        clickable: true,
+    },
+})

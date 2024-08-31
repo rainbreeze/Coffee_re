@@ -14,6 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./main.css">
     <script defer src="./main.js"></script>
     <script defer src="./youtube.js"></script>
@@ -23,9 +26,9 @@
 <body>
     <header>
         <div class="inner">
-            <div class="logo">
+            <a href="" class="logo">
                 <img src="./images/logo.png">
-            </div>
+            </a>
             <div class="sub-menu">
                 <ul class="menu">
                     <li>
@@ -376,6 +379,77 @@
             <img src="./images/badge2.jpg">
         </div>
     </div>
+    <section class="notice">
+        <div class="bg-left"></div>
+        <div class="bg-right"></div>
+        <div class="inner">
+            <div class="inner__left">
+                <h4>공지사항</h4>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                [아메리카노 30% 할인 기간 ] 9/1 ~ 9/15
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                [이벤트 당첨] 여름 커피 리뷰 이벤트
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                여름 신제품 출시 : '자몽 블랜드 티'
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                [지원자 모집] 주말 오후 파트 타임 알바 모집
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="material-icons">add_circle</a>
+            </div>
+            <div class="inner__right">
+                <h2>커피 프로모션</h2>
+                <span class="material-icons promotionBtn">upload</span>
+            </div>
+        </div>
+    </section>
+    <section class="promotion">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/promotion_slide1.jpg">
+                    <a href="" class="btn">자세히 보기</a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/promotion_slide2.jpg">
+                    <a href="" class="btn">자세히 보기</a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/promotion_slide3.jpg">
+                    <a href="" class="btn">자세히 보기</a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/promotion_slide4.jpg">
+                    <a href="" class="btn">자세히 보기</a>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/promotion_slide5.jpg">
+                    <a href="" class="btn">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev">
+            <span class="material-icons">arrow_back</span>
+        </div>
+        <div class="swiper-button-next">
+            <span class="material-icons">arrow_forward</span>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
 </body>
 
 </html>
