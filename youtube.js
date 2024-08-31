@@ -14,7 +14,8 @@
         autoplay : 1,
         loop : 1,
         playlist : 'eBQssdKOXg0',
-        start : 1
+        start : 1,
+        mute : 1
      }
    });
  }

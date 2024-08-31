@@ -39,8 +39,9 @@ window.addEventListener('scroll', function() {
 });
 
 new Swiper ('.notice .swiper', {
-    autoplay : true,
-    loop : true
+    direction: 'vertical', // 슬라이드를 수직 방향으로 설정
+    autoplay: true,
+    loop: true,
 });
 
 const promotionEl = document.querySelector('.promotion');
@@ -71,16 +72,35 @@ new Swiper ('.promotion .swiper', {
     },
 })
 
-gsap.to('.floating1', 1, {
-    x : 15,
+gsap.to('.floating1', 2, {
+    x : 85,
     repeat : -1,
     yoyo : true,
     ease: 'bounce.out'
 });
 
-gsap.to('.floating2', 1, {
-    x : 15,
+gsap.to('.floating2', 1.5, {
+    x : 105,
     delay : .5,
     repeat : -1,
     yoyo : true
 });
+
+gsap.to('.floating3', 3, {
+    y : -350,
+    repeat : -1,
+    yoyo : 1
+});
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+
+spyEls.forEach(function(spyEl){
+    new ScrollMagic
+    .Scene({
+        triggerElement: spyEl,
+        triggerHook: .9
+    })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller());
+});
+
