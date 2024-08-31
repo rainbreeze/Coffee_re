@@ -70,3 +70,17 @@ new Swiper ('.promotion .swiper', {
         clickable: true,
     },
 })
+
+gsap.to('.floating1', 1, {
+    x : 15,
+    repeat : -1,
+    yoyo : true,
+    ease: 'bounce.out'
+});
+
+gsap.to('.floating2', 1, {
+    x : 15,
+    delay : .5,
+    repeat : -1,
+    yoyo : true
+});
