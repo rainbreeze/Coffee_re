@@ -685,6 +685,48 @@ header .main-menu .item .item__contents .contents_texture p {
 
 .reserve-store .inner {
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserve-store .inner .medal {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 600px;
+}
+
+.reserve-store .medal .medal_back {
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.reserve-store .medal .medal_back .btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 70px;
+}
+
+.reserve-store .medal .medal_front {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.reserve-store .medal:hover .medal_front {
+    transform: rotateY(-180deg);
+}
+
+.reserve-store .medal:hover .medal_back {
+    transform: rotateY(0);
 }
 
 .find-store {
@@ -769,4 +811,153 @@ header .main-menu .item .item__contents .contents_texture p {
 .show .back-to-position {
     transform: translateX(0);
     opacity: 1;
+}
+
+#to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    height: 42px;
+    width: 42px;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#to-top:hover {
+    background-color: black;
+    color: white;
+}
+
+.awards {
+    background-color: #272727;
+}
+
+.awards .inner {
+    height: 60px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.awards .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    border-top: 1px solid #999;
+    background-color: #333;
+}
+
+footer .inner {
+    padding: 20px 0 10px 0;
+}
+
+footer .TOS {
+    display: flex;
+    justify-content: center;
+}
+
+footer .TOS ul{
+    display: flex;   
+}
+
+footer .TOS ul li {
+    position: relative;
+}
+
+footer .TOS ul li::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 2px;
+    height: 12px;
+    opacity: .3;
+    background-color: black
+}
+
+footer .TOS ul li:first-child::before {
+    display: none;
+}
+
+footer .TOS ul li a {
+    font-size: 18px;
+    color: #999;
+    padding: 10px;
+}
+
+footer .TOS ul li a.orange{
+    color: orange;
+}
+
+footer .btn-group {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+footer .btn-group .btn {
+    margin-right: 10px;
+}
+
+footer .btn-group .btn:last-child {
+    margin-right: 0;
+}
+
+footer .info {
+    display: flex;
+    justify-content: center;
+}
+
+footer .info ul{
+    margin: 5px 0;
+    display: flex;   
+}
+
+footer .info ul li {
+    position: relative;
+}
+
+footer .info ul li a {
+    padding: 10px;
+    font-size: 16px;
+}
+
+footer .info ul li::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 2px;
+    height: 12px;
+    opacity: .3;
+    background-color: black
+}
+
+footer .info ul li:first-child::before {
+    display: none;
+}
+
+footer .copyright {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+footer .copyright p {
+    font-size: 18px;
+}
+
+footer .logo {
+    margin: 20px auto 0;
+    display: block;
 }

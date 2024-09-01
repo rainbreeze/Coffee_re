@@ -24,16 +24,27 @@ fadeEls.forEach(function(fadeEl, index){
 });
 
 const badgesEl = document.querySelector('.badges');
+const toTopEl = document.querySelector('#to-top');
 
 window.addEventListener('scroll', function() {
     if(window.scrollY > 500) {
         gsap.to(badgesEl, .6, {
             opacity : 0
         });
+
+        gsap.to(toTopEl, .6, {
+            opacity : 1,
+            x: 0
+        });
     }
     else{
         gsap.to(badgesEl, .6, {
             opacity : 1
+        });
+
+        gsap.to(toTopEl, .6, {
+            opacity : 0,
+            x: 100
         });
     }
 });
@@ -104,3 +115,18 @@ spyEls.forEach(function(spyEl){
     .addTo(new ScrollMagic.Controller());
 });
 
+toTopEl.addEventListener('click', function(){
+    gsap.to(window, .8, {
+        scrollTo: 0
+    });
+});
+
+new Swiper('.awards .swiper', {
+    autoplay : true,
+    loop : true,
+    slidesPerView : 5
+});
+
+const thisyearEl = document.querySelector('.this-year');
+
+thisyearEl.textContent = new Date().getFullYear();
