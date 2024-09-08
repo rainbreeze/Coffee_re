@@ -127,12 +127,15 @@ header .main-menu .item .item__contents {
     top: 120px;
     left: 0;
     width: 100%;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     background-color: black;
 }
 
 header .main-menu .item:hover .item__contents {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 header .main-menu .item .item__contents .contents_list .contents {
